@@ -394,7 +394,9 @@ Kafka Console Producer는 카프카에 들어 있는 도구로 콘솔에 입력�
 (producer-client)$ kafka-console-producer --broker-list kafka-broker01:2181,kafka-broker02:2181,kafka-broker03:2181 \
 > --topic first-test
 >
+```
 
+```bash
 # 서버 1대
 (producer-client)$ kafka-console-producer --broker-list localhost:9092 --topic first-test
 >
