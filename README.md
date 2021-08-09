@@ -5,6 +5,5 @@
 
 
 ## Reference
-![apache_kafka](https://user-images.githubusercontent.com/81761337/128190453-bb615bd3-0d74-4315-95d1-a860fa58da57.jpg)
-
+실전 아파치 카프카
 https://www.hanbit.co.kr/store/books/look.php?p_code=B8503179529
