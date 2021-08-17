@@ -47,7 +47,7 @@ EOF
 전사상거래 사이트용 파일도 동일하다. 이것은 데이터를 받을 뿐이므로 kafka-broker01에 /ec라는 디렉터리만 만들자.
 
 ```bash
-(kafka-broker01)$ sudo mkkir /ec
+(kafka-broker01)$ sudo mkdir /ec
 (kafka-broker01)$ sudo chown $(whoami) /ec
 ```
 
