@@ -457,9 +457,9 @@ datahub-sales/
 ```json
 ecsales_ec_uriage+0+0000000000.json
 
-{"seq":"1","sales_time":1538737871000,"sales_id"="ECSALES00001","item_id":"ITEM001","amount":2,"unit_price":300}
-{"seq":"2","sales_time":1538737871000,"sales_id"="ECSALES00001","item_id":"ITEM002","amount":1,"unit_price":5900}
-{"seq":"3","sales_time":1538737871000,"sales_id"="ECSALES00002","item_id":"ITEM001","amount":4,"unit_price":298}
+{"seq":"1","sales_time":1538737871000,"sales_id":"ECSALES00001","item_id":"ITEM001","amount":2,"unit_price":300}
+{"seq":"2","sales_time":1538737871000,"sales_id":"ECSALES00001","item_id":"ITEM002","amount":1,"unit_price":5900}
+{"seq":"3","sales_time":1538737871000,"sales_id":"ECSALES00002","item_id":"ITEM001","amount":4,"unit_price":298}
 ```
 
 전자상거래 사이트의 매출 데이터가 들어 있음을 알 수 있다. POS 데이터도 확인해보자. POS 데이터가 들어 있을 것이다. 이것으로 전자상거래 사이트와 POS 데이터가 S3에 연결되어 있음을 확인했다.
