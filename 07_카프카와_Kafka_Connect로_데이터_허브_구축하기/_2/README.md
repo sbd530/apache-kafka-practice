@@ -516,4 +516,4 @@ VALUES (9, '2018-10-12 13:13:13', 'POSSALES00004', 'SHOP001', 'ITEM001', 2, 198)
 (kafka-client)$ curl -X DELETE http://localhost:8083/connectors/sink-sales-data
 ```
 
-Kafka Connect를 정짛한다. 실행한 connect-distributed를 [Ctrl] + [C]로 종료한다.
+Kafka Connect를 정지한다. 실행한 connect-distributed를 [Ctrl] + [C]로 종료한다.
