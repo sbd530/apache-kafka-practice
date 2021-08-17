@@ -89,7 +89,7 @@ Kafka Connect는 카프카의 브로커와 동일한 서버에서 실행한다. 
 실행되면 동작 상황을 확인한다. Kafka Connect는 실행하면 REST API로 액세스할 수 있다. API 중에서 현재 실행 중인 버전을 반환하는 API가 있으므로 실행해서 확인해보자.
 
 ```bash
-# (kafka-broker01)$ curl http://kafka-broker01:8083/
+# (kafka-client)$ curl http://kafka-broker01:8083/
 (kafka-client)$ curl http://localhost:8083/
 {"version":"2.0.0-cp1","commit":"fc9a81e8d72f61be",
 "kafka_cluster_id":"r3kI5RU0TWukdSpcJ5q0Tg"}
