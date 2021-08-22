@@ -455,11 +455,11 @@ datahub-sales/
 환경이나 데이터에 따라 조금씩 다를 수 있겠지만 비슷한 구조로 출력되었을 것이다. JSON의 내용도 살펴보자.
 
 ```json
-ecsales_ec_uriage+0+0000000000.json
+// ecsales_ec_uriage+0+0000000000.json
 
-{"seq":"1","sales_time":1538737871000,"sales_id":"ECSALES00001","item_id":"ITEM001","amount":2,"unit_price":300}
-{"seq":"2","sales_time":1538737871000,"sales_id":"ECSALES00001","item_id":"ITEM002","amount":1,"unit_price":5900}
-{"seq":"3","sales_time":1538737871000,"sales_id":"ECSALES00002","item_id":"ITEM001","amount":4,"unit_price":298}
+{"seq":"1","sales_time":1538737871000,"sales_id"="ECSALES00001","item_id":"ITEM001","amount":2,"unit_price":300}
+{"seq":"2","sales_time":1538737871000,"sales_id"="ECSALES00001","item_id":"ITEM002","amount":1,"unit_price":5900}
+{"seq":"3","sales_time":1538737871000,"sales_id"="ECSALES00002","item_id":"ITEM001","amount":4,"unit_price":298}
 ```
 
 전자상거래 사이트의 매출 데이터가 들어 있음을 알 수 있다. POS 데이터도 확인해보자. POS 데이터가 들어 있을 것이다. 이것으로 전자상거래 사이트와 POS 데이터가 S3에 연결되어 있음을 확인했다.
@@ -479,9 +479,9 @@ S3에 변경이 있는지 확인해보자. 이 책과 도일하게 먼저 초기
 
 ```sql
 INSERT INTO ec_uriage(seq, sales_time, sales_id, item_id, amount, unit_price)
-  VALUES (8, '2018-10-02 14:14:14', 'ECSALES00004', 'ITEM001', 1, 300);
+VALUES (8, '2018-10-02 14:14:14', 'ECSALES00004', 'ITEM001', 1, 300);
 INSERT INTO ec_uriage(seq, sales_time, sales_id, item_id, amount, unit_price)
-  VALUES (9, '2018-10-02 14:14:14', 'ECSALES00004', 'ITEM002', 1, 5800);
+VALUES (9, '2018-10-02 14:14:14', 'ECSALES00004', 'ITEM002', 1, 5800);
 ```
 
 S3을 확인하면 새로운 파일이 생성됐다.
@@ -507,7 +507,7 @@ VALUES (9, '2018-10-12 13:13:13', 'POSSALES00004', 'SHOP001', 'ITEM001', 2, 198)
 
 이것으로 데이터 허브가 동작하고 있는 동안 RDBMS상 데이터 변경이 항상 S3에 반영됨을 알 수 있다.
 
-이것으로 대략적인 데이터 허브의 동작을 확인할 수 있었다. 뒷정리를 하고 작업을 끝내자. 실행 중인 커터를 제거한다.
+이것으로 대략적인 데이터 허브의 동작을 확인할 수 있었다. 뒷정리를 하고 작업을 끝내자. 실행 중인 커넷터를 제거한다.
 
 ```bash
 # http://kafka-broker01:8083/...
@@ -516,4 +516,4 @@ VALUES (9, '2018-10-12 13:13:13', 'POSSALES00004', 'SHOP001', 'ITEM001', 2, 198)
 (kafka-client)$ curl -X DELETE http://localhost:8083/connectors/sink-sales-data
 ```
 
-Kafka Connect를 정지한다. 실행한 connect-distributed를 [Ctrl] + [C]로 종료한다.
+Kafka Connect를 정짛한다. 실행한 connect-distributed를 [Ctrl] + [C]로 종료한다.
